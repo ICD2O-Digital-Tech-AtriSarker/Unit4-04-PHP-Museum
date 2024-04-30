@@ -25,7 +25,7 @@
         // Redundant, because floatval() automatically parses empty input as 0
         $message = "Please Enter Positive Integer for Age!";
       }
-      else if (($age <= 0) || ($age % 1 != 0)) {
+      else if (($age <= 0) || (str_contains(strval($age), "."))) {
         $message = "Please Enter Positive Integer for Age";
       }
       else if (!$day) {
